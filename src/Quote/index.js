@@ -5,6 +5,10 @@ import Time from './Time';
 /**
  * Comment index component
  */
+ function getTimestamp(time) {
+    var d = new Date(+time);
+    return d.toLocaleString();
+}
 class Quote extends Component {
 
     /**
@@ -18,7 +22,7 @@ class Quote extends Component {
                     {this.props.quoteText}
                 </div>
                 <div className="Time">
-                    <Time />
+                    {getTimestamp(this.props.date)}
                 </div>
             </div>
         )

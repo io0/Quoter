@@ -39,6 +39,8 @@ class App extends Component {
     }.bind(this));
 
   }
+
+
   render() {
     var user = "Marley";
     
@@ -86,7 +88,7 @@ class Quotelist extends Component {
     return(
       <ul>
         {this.props.items.map(item => (
-          <Quote key={item.id} quoteText={item.quoteText}/>))}
+          <Quote key={item.id} date={item.id} quoteText={item.quoteText}/>))}
       </ul>
       );
   }
